@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic-Tac-Toe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-emerald-600 min-h-screen flex flex-col justify-center items-center text-center font-sans">
+  <div class="msg-container hidden mt-10 animate-fade-in-down">
+    <p id="msg" class="font-extrabold text-6xl text-white animate-bounce mb-6 drop-shadow-lg">Winner</p>
+    <button id="new-btn"
+      class="reset-btn bg-stone-800 px-8 py-3 rounded-xl text-white text-lg hover:bg-stone-600 transition duration-300 shadow-md hover:scale-105">
+      🎮 New Game
+    </button>
+  </div>
+
+  <main class="mt-4 w-full">
+    <h1 class="text-5xl font-extrabold text-white drop-shadow-md animate-pulse mt-6">✨ Tic Tac Toe ✨</h1>
+
+    <div class="container flex justify-center items-center mt-12">
+      <div class="game grid grid-cols-3 gap-4 animate-fade-in-up">
+        <button class="box h-20 w-20 sm:h-24 sm:w-24 bg-white rounded-xl shadow-lg font-extrabold text-3xl text-red-500 transition-all duration-200 hover:scale-105 active:scale-95"></button>
+        <button class="box h-20 w-20 sm:h-24 sm:w-24 bg-white rounded-xl shadow-lg font-extrabold text-3xl text-red-500 transition-all duration-200 hover:scale-105 active:scale-95"></button>
+        <button class="box h-20 w-20 sm:h-24 sm:w-24 bg-white rounded-xl shadow-lg font-extrabold text-3xl text-red-500 transition-all duration-200 hover:scale-105 active:scale-95"></button>
+        <button class="box h-20 w-20 sm:h-24 sm:w-24 bg-white rounded-xl shadow-lg font-extrabold text-3xl text-red-500 transition-all duration-200 hover:scale-105 active:scale-95"></button>
+        <button class="box h-20 w-20 sm:h-24 sm:w-24 bg-white rounded-xl shadow-lg font-extrabold text-3xl text-red-500 transition-all duration-200 hover:scale-105 active:scale-95"></button>
+        <button class="box h-20 w-20 sm:h-24 sm:w-24 bg-white rounded-xl shadow-lg font-extrabold text-3xl text-red-500 transition-all duration-200 hover:scale-105 active:scale-95"></button>
+        <button class="box h-20 w-20 sm:h-24 sm:w-24 bg-white rounded-xl shadow-lg font-extrabold text-3xl text-red-500 transition-all duration-200 hover:scale-105 active:scale-95"></button>
+        <button class="box h-20 w-20 sm:h-24 sm:w-24 bg-white rounded-xl shadow-lg font-extrabold text-3xl text-red-500 transition-all duration-200 hover:scale-105 active:scale-95"></button>
+        <button class="box h-20 w-20 sm:h-24 sm:w-24 bg-white rounded-xl shadow-lg font-extrabold text-3xl text-red-500 transition-all duration-200 hover:scale-105 active:scale-95"></button>
+      </div>
+    </div>
+
+    <!-- Reset Button -->
+    <div class="mt-12">
+      <button id="reset"
+        class="reset-btn bg-stone-800 px-8 py-3 rounded-xl text-white text-lg hover:bg-stone-600 transition duration-300 shadow-md hover:scale-105">
+        🔄 Reset Game
+      </button>
+    </div>
+  </main>
+
+  <!-- Add your JS file -->
+  <script src="ticTacToe.js"></script>
+
+  <!-- Custom animations using Tailwind (optional if not using Tailwind plugin) -->
+  <style>
+    @keyframes fade-in-up {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fade-in-down {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in-up {
+      animation: fade-in-up 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-down {
+      animation: fade-in-down 0.8s ease-out forwards;
+    }
+  </style>
+</body>
+</html>
